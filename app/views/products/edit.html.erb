@@ -1,0 +1,10 @@
+<h1>Edit Product details</h1>
+
+<%= simple_form_for(@product) do |f| %>
+<%= f.input :name %>
+<%= f.input :sku_id %>
+<%= f.input :price %>
+<%= f.input :images %>
+<%= f.input :expire_date %>
+<%= f.submit %>
+<% end %>

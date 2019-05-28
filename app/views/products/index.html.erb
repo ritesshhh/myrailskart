@@ -1,0 +1,39 @@
+<h1>List of all Products</h1>
+<table>
+<tr>
+	<th>ID</th>
+	<th>SKU_ID</th>
+	<th>NAME</th>
+	<th>PRICE</th>
+	<th>IMAGE</th>
+</tr>	
+<% @products.each do |product| %>
+	<tr>
+		<td >
+			<%= product.id %>
+		</td>
+		<td >
+			<%= product.sku_id %>	
+		</td>
+		<td >
+			<%= truncate(product.name, length: 20)  %>
+		</td>
+		<td>
+			<%= product.price %>
+		</td>
+		<td >
+			
+			<%= image_tag(product.images, {:style=>'height:10vw;width:10vw;margin-bottom:20px;'})%>
+		</td>
+		<td>
+			<%= link_to 'Show', product %>		
+		</td>
+		<td>
+			<%= link_to 'Edit', edit_product_path(product) %>		
+		</td>
+	</tr>
+<%end%>	
+</table>
+
+
+
