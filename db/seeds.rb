@@ -10,8 +10,8 @@
 	Product.create({
 		name: Faker::Book.title,
 		expire_date: Faker::Date.between(2.days.ago, Date.today),
-		sku_id: Faker::Number.number(10),
+		sku_id: Faker::Number.number(5),
 		images: 'http://power.itp.ac.cn/~jmyang/funny/fun4.jpg',
-		price: Faker::Number.decimal(10, 2)
+		price: Faker::Number.decimal(5, 2)
 		})
 end
